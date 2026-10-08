@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Game Server Manager/Game Server Manager.vcxproj" Id="4300c134-eed6-4b99-abca-386c814e894e" />
+</Solution>
