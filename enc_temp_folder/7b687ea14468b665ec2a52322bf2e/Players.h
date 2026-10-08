@@ -16,5 +16,3 @@ void viewTarget(Entity* target);
 void changeName(Entity* target);
 
 void hurtPlayer(Entity* target);
-
-void killPlayer(Entity* target);

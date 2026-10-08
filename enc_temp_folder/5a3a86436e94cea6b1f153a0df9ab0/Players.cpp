@@ -140,24 +140,6 @@ void hurtPlayer(Entity* target)
 	target->health -= dmg;
 
 	cout << "[+] " << target->name << " Took " << dmg << " Damage" << endl;
-	cout << target->name << " Health : " << healthSnapshot << " -> " << target->health << endl;
-	getKey();
-}
-
-void killPlayer(Entity* target)
-{
-	clear();
-
-	if (!isValid(target))
-	{
-		cout << "[!] No Target Selected" << endl;
-		pause();
-		return;
-	}
-
-	const int healthSnapshot = target->health;
-	target->health = 0;
-
-	cout << "[+] You Killed " << target->name << " Health: " << healthSnapshot << " -> " << target->health << endl;
+	cout << target->health << " Health : " << healthSnapshot << " -> " << target->health << endl;
 	getKey();
 }

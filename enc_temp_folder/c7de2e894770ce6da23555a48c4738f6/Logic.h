@@ -75,12 +75,13 @@ inline int damage()
 
 inline void adminPanel(Entity* target, vector<Entity>& entities)
 {
+	printAdmin(target);
 
 	int adminOption;
 
 	while (true)
 	{
-		printAdmin(target);
+		clear();
 
 		cout << "[1] Hurt Player" << endl;
 		cout << "[2] Kill Player" << endl;
@@ -106,7 +107,7 @@ inline void adminPanel(Entity* target, vector<Entity>& entities)
 			break;
 
 		case KillPlayer:
-			killPlayer(target);
+
 			break;
 
 		case KickPlayer:
