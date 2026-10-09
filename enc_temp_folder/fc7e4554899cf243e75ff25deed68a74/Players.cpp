@@ -281,7 +281,6 @@ void banPlayers(vector<Entity>& entities, Entity*& target, vector<Banned>& banne
 			Banned temp(bannedName, "Exploit", BanType::Temporary, 30);
 			bannedList.push_back(temp);
 
-			space();
 			cout << "[+] " << green << "Successfully " << reset << "Temp Ban " << bannedName << "!" << endl;
 			getKey();
 			break;
@@ -291,8 +290,6 @@ void banPlayers(vector<Entity>& entities, Entity*& target, vector<Banned>& banne
 		{
 			Banned perm(bannedName, "Cheating", BanType::Permanent, 999);
 			bannedList.push_back(perm);
-
-			space();
 			cout << "[+] " << green << "Successfully " << reset << "Struck " << bannedName << " With The Ban Hammer!" << endl;
 			getKey();
 			break;

@@ -43,3 +43,25 @@ struct Entity
 		positions.y = posY;
 	}
 };
+
+enum struct BanType
+{
+	Temporary,
+	Permanent,
+};
+
+struct Banned
+{
+	string name;
+	string reason;
+	BanType bantype;
+	int legnth;
+
+	Banned(string banName, string banReason, BanType banType, int banLegnth)
+	{
+		name = banName;
+		reason = banReason;
+		bantype = banType;
+		legnth = banLegnth;
+	}
+};

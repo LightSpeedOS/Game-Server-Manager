@@ -9,12 +9,14 @@ auto main() -> int
 {
 	initConsole();
 
+	vector<Banned> bannedList;
 	vector<Entity> entities;
 	createPlayers(entities);
 
 	Entity* currentTarget = nullptr;
 
-	string fileName = R"(C:\Users\Jamaal\source\repos\LightSpeedOS\Game-Server-Manager\Game Server Manager\Names\names.txt)";
+	//string fileName = R"(C:\Users\Jamaal\source\repos\LightSpeedOS\Game-Server-Manager\Game Server Manager\Names\names.txt)";
+	string fileName = R"(C:\Support\Apps\C++\Game Server Manager\Game Server Manager\Names\names.txt)";
 	vector<string> names = loadNames(fileName);
 
 	int mainOption;
@@ -65,7 +67,7 @@ auto main() -> int
 			break;
 
 		case AdminMenu:
-			adminPanel(currentTarget, entities);
+			adminPanel(currentTarget, entities, bannedList);
 			break;
 
 		case Exit:

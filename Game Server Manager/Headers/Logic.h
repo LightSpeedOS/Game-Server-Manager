@@ -73,7 +73,13 @@ inline int damage()
 	return rand() % 60 + 1;
 }
 
-inline void adminPanel(Entity* target, vector<Entity>& entities)
+inline string banTypeText(BanType type)
+{
+	if (type == BanType::Temporary) return "Temporary";
+	if (type == BanType::Permanent) return "Permanent";
+}
+
+inline void adminPanel(Entity*& target, vector<Entity>& entities, vector<Banned>& bannedList)
 {
 
 	int adminOption;
@@ -110,15 +116,15 @@ inline void adminPanel(Entity* target, vector<Entity>& entities)
 			break;
 
 		case KickPlayer:
-
-			break;
+			kickPlayers(entities, target);
+			return;
 
 		case BanPlayer:
-
+			banPlayers(entities, target, bannedList);
 			break;
 
 		case ViewBanned:
-
+			viewBannedList(bannedList);
 			break;
 
 		case Return:

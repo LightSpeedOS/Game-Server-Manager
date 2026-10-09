@@ -18,3 +18,9 @@ void changeName(Entity* target);
 void hurtPlayer(Entity* target);
 
 void killPlayer(Entity* target);
+
+void kickPlayers(vector<Entity>& entities, Entity*& target);
+
+void banPlayers(vector<Entity>& entities, Entity*& target, vector<Banned>& bannedList);
+
+void viewBannedList(vector<Banned>& bannedList);
